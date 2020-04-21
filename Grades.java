@@ -1,4 +1,4 @@
-// How do I get the lowest scores too
+// How do I make it so it states the name with the grade.
 
 import java.util.*;
 import java.io.*;
@@ -19,6 +19,7 @@ public class Grades {
         int largest;
         int smallest;
         int totalGrades = 1;
+        int gradesCount = 0;
         String names = null;
         String winner = null;
 
@@ -29,6 +30,7 @@ public class Grades {
             names = sc.next();
             largest = parseInt(String.valueOf(sc.next()));
             smallest = largest;
+            gradesCount += largest;
             if (number < largest) {
                 number = largest;
                 winner = names;
@@ -41,6 +43,9 @@ public class Grades {
         System.out.println("Highest grade: " + winner + " " + number);
         System.out.println(smallest);
         System.out.println("Total grades processed " + totalGrades);
+        double average = gradesCount/totalGrades;
+        System.out.println("Average of grades is " + average);
 
     }
 }
+
