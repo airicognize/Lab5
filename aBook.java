@@ -19,14 +19,6 @@ public class aBook {
     int ISBN;
     int yearOfPub;
 
-    public void aBook() {
-        this.title = "Unknown";
-        this.author = "Unknown";
-        this.ISBN = 0;
-        this.yearOfPub = 0;
-        amountOfBooks++;
-    }
-    
     public aBook(String newTitle, String newAuthor, int newISBN, int newYearOfPub, String publisher) {
 
         this.title = newTitle;
@@ -37,6 +29,8 @@ public class aBook {
         amountOfBooks++;
 
     }
+
+
         public String getTitle() {
             return title;
         }
@@ -58,22 +52,41 @@ public class aBook {
             return author;
         }
 
-    public static void main(String[] args) {
- 
-        aBook ISBN;
-        
-        Integer ISBN1 = 0;
-        Integer ISBN2 = 1;
 
-        if (ISBN1.equals(ISBN2)) {
-            System.out.println("This is the same book.");
-        } else {
-
+        public String toString() {
+            
+            String book = "";
+            book += "\nTitle of the book>> " + this.title; 
+            book += "\nAuthor of the book>> " + this.author;
+            book += "\nISBN of the book>> " + this.ISBN;
+            book += "\nPublisher of the book>> " + this.publisher;
+            book += "\nYear of publication of " + title + ">>" + this.yearOfPub;
+            return book;
         }
 
-        aBook book1 = new aBook("author","title",1000,100,publisher);
+        public boolean equals(aBook book1) {
+            if (this.ISBN == book1.ISBN) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+    public static void main(String[] args) {
+ 
+
+        aBook book1 = new aBook("redz"," jerem",1000,100,publisher);
+
+        aBook book2 = new aBook("lblo","blz",1000,103,publisher);
+        
 
         System.out.println(book1);
+
+        System.out.println(book2);
+
+
+        System.out.println("\nAmount of books " + amountOfBooks);
 
 
       
