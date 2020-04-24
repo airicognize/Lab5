@@ -78,7 +78,7 @@ public class aBook {
 
         aBook book1 = new aBook("redz"," jerem",1000,100,publisher);
 
-        aBook book2 = new aBook("lblo","blz",1000,103,publisher);
+        aBook book2 = new aBook("lblo","blz",2220,103,publisher);
         
 
         System.out.println(book1);
