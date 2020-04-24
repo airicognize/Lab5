@@ -1,4 +1,5 @@
 /**
+/**
  * a class encapsulating the concept of a book. The attributes of a book are title,author,ISBN andyear of publishing.
  * The class has a static attribute publisher initialized as “Vanier”, and an amountOfBooks, which is initially zero. 
  * Include a constructor, accessors and mutators, and the methods toString and equals. 
@@ -18,6 +19,7 @@ public class aBook {
     String author;
     int ISBN;
     int yearOfPub;
+    static boolean sameValues;
 
     public aBook(String newTitle, String newAuthor, int newISBN, int newYearOfPub, String publisher) {
 
@@ -60,7 +62,7 @@ public class aBook {
             book += "\nAuthor of the book>> " + this.author;
             book += "\nISBN of the book>> " + this.ISBN;
             book += "\nPublisher of the book>> " + this.publisher;
-            book += "\nYear of publication of " + title + ">>" + this.yearOfPub;
+            book += "\nYear of publication of " + title + ">> " + this.yearOfPub;
             return book;
         }
 
@@ -72,13 +74,12 @@ public class aBook {
             }
         }
 
-
     public static void main(String[] args) {
  
 
-        aBook book1 = new aBook("redz"," jerem",1000,100,publisher);
+        aBook book1 = new aBook("Once upon a time","Arthur reatsiz ",283940572,1995,publisher);
 
-        aBook book2 = new aBook("lblo","blz",2220,103,publisher);
+        aBook book2 = new aBook("Destructive Anonima","Richard Valors",484926349,1992,publisher);
         
 
         System.out.println(book1);
@@ -88,6 +89,11 @@ public class aBook {
 
         System.out.println("\nAmount of books " + amountOfBooks);
 
+        if (book1.publisher == book2.publisher && book1.amountOfBooks == book2.amountOfBooks) {
+            sameValues = true;
+        } else {
+            sameValues = false;
+        }
 
       
     }
