@@ -1,4 +1,4 @@
-# Lab5 April 2020
+# Lab 5 April 2020
 
 This repository is used for my Lab 5 questions.
 
